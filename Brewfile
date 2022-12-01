@@ -1,26 +1,34 @@
 # Taps
-tap "coursier/formulas"
 tap "elastic/tap"
-tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "romkatv/powerlevel10k"
 
 # Fonts
 cask "font-hack-nerd-font"
-cask "font-inconsolata"
+cask "font-cascadia-code"
+cask "font-cascadia-code-pl"
+cask "font-cascadia-mono"
+cask "font-cascadia-mono-pl"
 
 # Apps
+cask "iterm2"
+cask "visual-studio-code"
+cask "notion"
+cask "google-chrome"
+cask "spotify"
+cask "docker"
+cask "microsoft-office"
 
 # Languages
+brew "python3"
 brew "python@3.9"
 brew "python@3.8"
 brew "go"
 brew "scala"
-brew "java11"
+brew "openjdk@11"
 
 # Tools
 brew "git"
@@ -51,12 +59,12 @@ brew "pgcli"
 brew "postgresql@14"
 
 # Shell
+brew "bat"
 brew "exa"
 brew "antigen"
 brew "coreutils"
 brew "fish"
 brew "fisher"
-brew "fzf"
 brew "ammonite-repl"
 brew "starship"
 

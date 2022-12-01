@@ -1,16 +1,80 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+format = """
+    $username\
+    $hostname\
+    $directory\
+    $git_branch\
+    $git_state\
+    $git_status\
+    $git_metrics\
+    $fill\
+    $cmd_duration $jobs $time\
+    $line_break\
+    $character
+"""
 
-# Inserts a blank line between shell prompts
-add_newline = true
+[fill]
+symbol = " "
 
-command_timeout = 1000
+[directory]
+style = "blue"
+read_only = " "
+truncation_length = 4
+truncate_to_repo = false
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
-error_symbol = "[✗](bold red)" # used if previous command failed
+[character]
+success_symbol = "[](purple) "
+error_symbol = "[](red) "
+vicmd_symbol = "[](green) "
 
-# Disable the package module, hiding it from the prompt completely
-[package]
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "bright-black"
+
+[jobs]
+symbol = ""
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
 disabled = false
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[memory_usage]
+symbol = " "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = "🐍 "
+pyenv_version_name = true
+
+[java]
+symbol = " "
+
+[golang]
+format = "via [ $version](bold cyan) "
+symbol = " "
+
+[scala]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold white"
+format = "[$time]($style)"
+
+[[battery.display]]
+threshold = 15
+style = "bold red"
