@@ -34,9 +34,17 @@ select answer in "Yes" "No"; do
 done
 
 # Apply Brewfile
+echo "Run Brew install? [Enter number]: "
+select answer in "Yes" "No"; do
+    case $answer in
+        Yes ) break;;
+        No ) exit;;
+    esac
+done
+
 brew_cfg_dir_path="${HOME}/.config/brew"
 
-if [ ! -d brew_cfg_dir_path ]; then
+if [ ! -d "$brew_cfg_dir_path" ]; then
     echo "Brew config directory not found. Initialising at $brew_cfg_dir_path"
     mkdir -p "$brew_cfg_dir_path"
 fi
@@ -50,7 +58,8 @@ else
         case $answer in
             Yes ) cp ./Brewfile "$brew_cfg_dir_path/Brewfile"
                     break;;
-            No ) exit;;
+            No ) echo "Bundling using existing Brewfile"
+                    break;;
         esac
     done
 fi
