@@ -16,7 +16,13 @@ if [ ! "$(command -v chezmoi)" ]; then
 fi
 
 # Apply dotfiles
-chezmoi init --apply ChristopherLiew
+read -n 1 -p "Do you want to apply the dotfiles from ChristopherLiew GitHub [y/N]: " answer
+if [ "$answer" == "${answer#n [Yy]}" ]; then
+    chezmoi init --apply ChristopherLiew
+else
+    echo "Aborted"
+    exit 1
+fi
 
 # Update Brew
 if [ ! "$(command -v brew)" ]; then

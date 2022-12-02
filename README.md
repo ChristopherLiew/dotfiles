@@ -7,9 +7,6 @@ My collection of dotfiles for macOS
 1. ```chezmoi```
 2. ```git```
 3. ```homebrew```
-4. ```sudo```
-
----
 
 ## Usage
 
@@ -17,8 +14,9 @@ My collection of dotfiles for macOS
 
 #### One-Step
 
-```zsh
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ChristopherLiew
+```bash
+git pull https://github.com/ChristopherLiew/dotfiles.git
+bash ./install.sh
 ```
 
 #### Homebrew
@@ -33,4 +31,3 @@ brew install chezmoi
 # 3. Pull and apply dotfiles from github
 chezmoi init --apply ChristopherLiew
 ```
-
