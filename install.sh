@@ -1,7 +1,6 @@
 #!/bin/bash
 
 set -e
-brew_cfg_dir_path="${HOME}/.config/brew"
 
 # Install Brew
 if [ ! "$(command -v brew)" ]; then
@@ -34,13 +33,28 @@ select answer in "Yes" "No"; do
     esac
 done
 
-# Install Brewfile
+# Apply Brewfile
+brew_cfg_dir_path="${HOME}/.config/brew"
+
 if [ ! -d brew_cfg_dir_path ]; then
-    mkdir -p brew_cfg_dir_path
-    if [ ! -f "$brew_cfg_dir_path/Brewfile" ]; then
-        echo "Brewfile not found. Creating new Brewfile"
-        cp ./Brewfile "$brew_cfg_dir_path/Brewfile"
-    fi
+    echo "Brew config directory not found. Initialising at $brew_cfg_dir_path"
+    mkdir -p "$brew_cfg_dir_path"
 fi
 
-brew bundle --file=$brew_file_path
+if [ ! -f "${brew_cfg_dir_path}/Brewfile" ]; then
+    echo "Brewfile not found. Initialising at ${brew_cfg_dir_path}/Brewfile"
+    cp ./Brewfile "$brew_cfg_dir_path/Brewfile"
+else
+    echo "Brewfile already exists! Do you want to use ChristopherLiew Brewfile? [Enter number]: "
+    select answer in "Yes" "No"; do
+        case $answer in
+            Yes ) cp ./Brewfile "$brew_cfg_dir_path/Brewfile"
+                    break;;
+            No ) exit;;
+        esac
+    done
+fi
+
+# Run install and validate
+brew bundle --file="${brew_cfg_dir_path}/Brewfile"
+brew bundle check
