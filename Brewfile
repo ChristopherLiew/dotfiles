@@ -16,10 +16,11 @@ cask "font-cascadia-mono-pl"
 # Apps
 cask "iterm2"
 cask "visual-studio-code"
+cask "docker"
+cask "omnidisksweeper"
 cask "notion"
 cask "google-chrome"
 cask "spotify"
-cask "docker"
 cask "microsoft-office"
 
 # Languages
