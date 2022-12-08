@@ -1,3 +1,6 @@
+# Variables
+set editor "vim"
+
 # Fundamentals
 abbr cpr 'cp -rf'
 abbr rmr 'rm -rf'
@@ -22,9 +25,9 @@ abbr dl "cd ~/Downloads"
 abbr dc "cd ~/Documents"
 
 # Config files
-abbr cvim '$EDITOR $HOME/.vimrc'
-abbr cfish '$EDITOR $__fish_config_dir/custom.d'
-abbr czsh '$EDITOR $HOME/.zshrc'
+abbr cvim "$editor $HOME/.vimrc"
+abbr cfish "$editor $__fish_config_dir/config.fish"
+abbr czsh "$editor $HOME/.zshrc"
 
 # Docker compose
 if type -q docker-compose

@@ -67,3 +67,14 @@ fi
 # Run install and validate
 brew bundle --file="${brew_cfg_dir_path}/Brewfile"
 brew bundle check
+
+
+# Install python packages
+echo "Install python packages? [Enter number]: "
+select answer in "Yes" "No"; do
+    case $answer in
+        Yes ) pip install -r ./requirements.txt
+            break;;
+        No ) exit;;
+    esac
+done
