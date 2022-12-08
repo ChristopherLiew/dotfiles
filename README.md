@@ -9,8 +9,10 @@ My collection of dotfiles on macOS as managed by chezmoi :)
 3. ```homebrew```
 4. ```fish```
 5. ```starship```
+6. ```pip```
 
 ## Usage
+
 Pull from Github and run the ```install.sh``` script
 
 ```bash
