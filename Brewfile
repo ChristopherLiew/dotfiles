@@ -76,5 +76,6 @@ brew "poetry"
 brew "sqlfluff"
 
 # Quality of Life
+brew "btop"
 brew "cowsay"
 brew "fortune"
