@@ -16,12 +16,14 @@ cask "font-cascadia-mono-pl"
 # Apps
 cask "iterm2"
 cask "visual-studio-code"
+cask "jetbrains-toolbox"
+cask "rectangle"
 cask "docker"
 cask "omnidisksweeper"
 cask "notion"
 cask "google-chrome"
 cask "spotify"
-cask "microsoft-office"
+cask "telegram-desktop"
 
 # Languages
 brew "python3"

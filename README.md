@@ -11,7 +11,7 @@ My collection of dotfiles on macOS as managed by chezmoi :)
 5. ```starship```
 6. ```pip```
 
-## Usage
+## Usagze
 
 Pull from Github and run the ```install.sh``` script
 
