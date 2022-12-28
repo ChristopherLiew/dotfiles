@@ -72,8 +72,10 @@ brew "ammonite-repl"
 brew "starship"
 
 # Misc
-brew "flake8"
-brew "isort"
+brew "pre-commit"
+brew "ruff" # Much faster replacement for flake8 & isort compatible with black & pre-commit
+# brew "flake8"
+# brew "isort"
 brew "poetry"
 brew "sqlfluff"
 

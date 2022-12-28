@@ -17,7 +17,6 @@ fastapi[all]>=0.87.0
 uvicorn[standard]>=0.20.0
 flake8>=6.0.0
 # rich>=12.6.0 # rich is a dependency of typer
-pre-commit>=2.15.0
 typing-extensions>=4.0.0
 pydantic>=1.8.2
 

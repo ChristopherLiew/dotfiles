@@ -15,7 +15,7 @@ My collection of dotfiles on macOS as managed by chezmoi :)
 
 Pull from Github and run the ```install.sh``` script
 
-```bash
+```shell
 git pull https://github.com/ChristopherLiew/dotfiles.git
 bash ./install.sh
 ```

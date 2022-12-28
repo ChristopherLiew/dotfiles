@@ -18,7 +18,7 @@ if [ ! "$(command -v chezmoi)" ]; then
     elif [ "$(command -v wget)" ]; then
         bash -c "$(wget -qO- https://git.io/chezmoi)" -- -b "$bin_dir"
     else
-        echo "To install chezmoi, you must have curl or wget installed." >&2
+        echo "To install chezmoi, you must have brew, curl or wget installed." >&2
         exit 1
     fi
 fi
