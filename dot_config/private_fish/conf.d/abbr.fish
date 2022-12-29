@@ -64,3 +64,10 @@ if type -q git
     abbr gd 'git diff'
     abbr gr 'git restore .'
 end
+
+# Brew
+abbr buu 'brew update && brew upgrade &'
+abbr bi 'brew info'
+
+# Pip
+abbr pips 'pip freeze | grep'
