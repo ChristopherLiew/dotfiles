@@ -66,7 +66,7 @@ if type -q git
 end
 
 # Brew
-abbr buu 'brew update && brew upgrade &'
+abbr buu 'brew update & && brew upgrade &'
 abbr bi 'brew info'
 
 # Pip
