@@ -7,6 +7,9 @@ for file in $__fish_config_dir/custom.d/*.fish
     source $file
 end
 
+# Set GOROOT
+export GOROOT="$(brew --prefix golang)/libexec"
+
 # iTerm 2 integration
 source ~/.iterm2_shell_integration.fish
 
