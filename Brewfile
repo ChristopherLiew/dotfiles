@@ -72,12 +72,12 @@ brew "ammonite-repl"
 brew "starship"
 
 # Misc
+brew "poetry" # Deps manager
 brew "pre-commit"
 brew "ruff" # Much faster replacement for flake8 & isort compatible with black & pre-commit
 # brew "flake8"
 # brew "isort"
-brew "poetry"
-brew "sqlfluff"
+brew "sqlfluff" # SQL linter
 
 # Quality of Life
 brew "btop"

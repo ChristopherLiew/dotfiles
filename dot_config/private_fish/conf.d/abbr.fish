@@ -67,6 +67,7 @@ end
 
 # Brew
 abbr buu 'brew update && brew upgrade'
+abbr buuc 'brew update && brew upgrade && brew cleanup'
 abbr bi 'brew info'
 
 # Pip
