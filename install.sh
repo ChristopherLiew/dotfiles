@@ -79,5 +79,6 @@ select answer in "Yes" "No"; do
 done
 
 # Change shell to fish
+fish_add_path /opt/homebrew/bin
 echo "/opt/homebrew/bin/fish" | sudo tee -a /etc/shells
 chsh -s /opt/homebrew/bin/fish
