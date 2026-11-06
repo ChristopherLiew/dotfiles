@@ -1,10 +1,5 @@
 # Taps
 tap "elastic/tap"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/core"
-tap "homebrew/services"
 
 # Fonts
 cask "font-hack-nerd-font"
@@ -27,8 +22,6 @@ cask "telegram-desktop"
 
 # Languages
 brew "python3"
-brew "python@3.9"
-brew "python@3.8"
 brew "go"
 brew "scala"
 brew "openjdk@11"
@@ -63,7 +56,11 @@ brew "postgresql@14"
 
 # Shell
 brew "bat"
-brew "exa"
+brew "eza"
+brew "fd"
+brew "ripgrep"
+brew "fzf"
+brew "chezmoi"
 brew "antigen"
 brew "coreutils"
 brew "fish"
