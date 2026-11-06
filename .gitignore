@@ -1,4 +1,4 @@
 .DS_store
 # Machine/work-specific fish config (not tracked)
-dot_config/private_fish/conf.d/work.fish
+private_dot_config/private_fish/conf.d/work.fish
 **/fish_variables

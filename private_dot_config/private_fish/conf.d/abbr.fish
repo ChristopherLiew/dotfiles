@@ -6,20 +6,10 @@ abbr cpr 'cp -rf'
 abbr rmr 'rm -rf'
 abbr md 'mkdir -p'
 abbr rd 'rmdir'
-if type -q exa
-    abbr lsa 'exa -lag --git --icons --sort=type'
-    abbr l 'exa -lag --git --icons --sort=type'
-    abbr ll 'exa -l --icons --git --sort=type'
-    abbr la 'exa -lag --git --icons --sort=type'
-else
-    abbr lsa 'ls -lah'
-    abbr l 'ls -lah'
-    abbr ll 'ls -lh'
-    abbr la 'ls-lAh'
-end
-
 # Quick access
 abbr home "cd ~"
+abbr .. "cd .."
+abbr ... "cd ../.."
 abbr dt "cd ~/Desktop"
 abbr dl "cd ~/Downloads"
 abbr dc "cd ~/Documents"
@@ -56,13 +46,18 @@ if type -q git
     abbr ga 'git add .'
     abbr gaa 'git add --all'
     abbr gc 'git commit'
-    abbr gcm 'git commit -m'
-    abbr gs 'git status'
+    abbr --set-cursor='%' gcm 'git commit -m "feat: %"'
+    abbr gs 'git status -sb'
     abbr gp 'git push'
     abbr gpl 'git pull'
-    abbr gl 'git log'
+    abbr gl 'git log --oneline --graph -15'
     abbr gd 'git diff'
     abbr gr 'git restore .'
+    abbr gco 'git checkout'
+    abbr gst 'git stash'
+    abbr gem 'git commit --amend'
+    abbr gf 'git fetch'
+    abbr gpf 'git push -f'
 end
 
 # Brew
@@ -72,3 +67,13 @@ abbr bi 'brew info'
 
 # Pip
 abbr pips 'pip freeze | grep'
+
+# Go
+abbr goup 'go get -u ./...'
+
+# Java
+abbr j17 'set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home'
+abbr j8 'set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home'
+
+# Misc
+abbr spank 'spank --halo --cooldown 600'
