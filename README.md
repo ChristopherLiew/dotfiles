@@ -10,7 +10,7 @@ curl -fsSL https://raw.githubusercontent.com/ChristopherLiew/dotfiles/main/insta
 
 ## Day to day
 
-| | |
+| Command | Action |
 |---|---|
 | `chezmoi edit ~/.config/fish/conf.d/abbr.fish` | edit a managed file |
 | `chezmoi re-add` | pull live edits back into the repo |
